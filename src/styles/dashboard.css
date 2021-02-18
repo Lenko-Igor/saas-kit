@@ -1,0 +1,22 @@
+.wrapper {
+  background-color: #f5f6f8;
+  height: 790px;
+  display: flex;
+  justify-content: space-between;
+  padding: 36px;
+}
+.wrapper .tasks {
+  width: 100%;
+  background-color: #ffff;
+  margin-right: 30px;
+}
+.wrapper .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper .wrap .deals, .wrapper .wrap .task_chart {
+  width: 445px;
+  height: 344px;
+  background-color: #ffff;
+}

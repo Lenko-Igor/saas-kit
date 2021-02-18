@@ -1,0 +1,36 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  padding: 27px 0 40px;
+}
+.profile .avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 23px 23px;
+  background: url(../img/profile.svg) no-repeat center;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.profile .avatar:hover {
+  border: 2px solid #109CF1;
+}
+ul {
+  list-style-type: none;
+  padding-top: 5px;
+  margin: 0;
+}
+.profile .name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #192A3E;
+}
+.profile .email {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #90A0B7
+}
