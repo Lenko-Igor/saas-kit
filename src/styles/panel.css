@@ -39,16 +39,20 @@
 }
 .tools {
   list-style-type: none;
-  display: flex;
-  cursor: pointer;
   margin-bottom: 20px;
+}
+.tools a {
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 .tools .icon {
   width: 22px;
   height: 20px;
   margin-right: 14px;
 }
-.tools:hover{
+.tools a:hover{
   filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 .active {

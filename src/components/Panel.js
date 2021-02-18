@@ -40,7 +40,7 @@ function Panel(){
     {title:'Toggle sidebar', img: toggle, active:false},
   ])
 
-  function toActive(title){
+  function changeColor(title){
     setTools(tools.map(e=> {
       e.title === title ? e.active = true : e.active=false
       return e
@@ -53,7 +53,7 @@ function Panel(){
   }
 
   return (
-    <Context.Provider value={{toActive}}>
+    <Context.Provider value={{changeColor}}>
       <div className="panel">
         <div className="title">
           <h1>SaaS Kit</h1>

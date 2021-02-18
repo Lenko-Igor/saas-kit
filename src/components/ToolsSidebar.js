@@ -4,26 +4,30 @@ import Context from '../context'
 import UnderTools from './UnderTools'
 
 function ToolsSidebar({tools}){
-  const {toActive} = useContext(Context)
-  const classes = `tools ${tools.active && 'active'}`
+  const {changeColor} = useContext(Context)
+  const classes = `${tools.active && 'active'}`
 
   return(
-    <li className={classes} 
-        onClick={()=> {toActive(tools.title)}}
-    >
+    <li className="tools">
+      <a 
+        href="!#" 
+        className={classes} 
+        onClick={()=> {changeColor(tools.title)}}
+      >
         <div 
           className="icon" 
           style={{background: `url(${tools.img}) no-repeat`,}}
         />
         <p>{tools.title}</p>
-        <UnderTools options={tools.options}/>
+      </a>
+        <UnderTools tools={tools}/>
     </li>
   )
 }
 
 ToolsSidebar.propTypes = {
   tools: PropTypes.object.isRequired,
-  toActive: PropTypes.func,
+  changeColor: PropTypes.func,
 }
 
 export default ToolsSidebar
