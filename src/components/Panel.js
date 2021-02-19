@@ -39,6 +39,7 @@ function Panel(){
     {title:'Settings', img: settings, active:false},
     {title:'Toggle sidebar', img: toggle, active:false},
   ])
+  const [panelFlag, setPanelFlag] = useState(true)
 
   function changeColor(title){
     setTools(tools.map(e=> {
@@ -52,11 +53,15 @@ function Panel(){
 
   }
 
+  function toCloseOpenPanel(){
+    setPanelFlag(!panelFlag)
+  }
+
   return (
-    <Context.Provider value={{changeColor}}>
-      <div className="panel">
-        <div className="title">
-          <h1>SaaS Kit</h1>
+    <Context.Provider value={{changeColor, toCloseOpenPanel, panelFlag}}>
+      <div className="panel" style={{width: panelFlag || '68px'}}>
+        <div className="title" style={{paddingLeft: panelFlag || '10px'}}>
+          <h1>SaaS {panelFlag && 'Kit'}</h1>
         </div>
         <Profile/>
         <div className="menu_sidebar">

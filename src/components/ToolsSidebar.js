@@ -4,7 +4,7 @@ import Context from '../context'
 import UnderTools from './UnderTools'
 
 function ToolsSidebar({tools}){
-  const {changeColor} = useContext(Context)
+  const {changeColor, toCloseOpenPanel, panelFlag} = useContext(Context)
   const classes = `${tools.active && 'active'}`
 
   return(
@@ -12,15 +12,24 @@ function ToolsSidebar({tools}){
       <a 
         href="!#" 
         className={classes} 
-        onClick={()=> {changeColor(tools.title)}}
+        onClick={(event)=> {
+          event.preventDefault()
+
+          if(tools.title === 'Toggle sidebar'){ 
+            toCloseOpenPanel() 
+            panelFlag? tools.active = true : tools.active = false
+          } else {
+            changeColor(tools.title)
+          }
+        }}
       >
         <div 
           className="icon" 
           style={{background: `url(${tools.img}) no-repeat`,}}
         />
-        <p>{tools.title}</p>
+        <p>{panelFlag && tools.title}</p>
       </a>
-        <UnderTools tools={tools}/>
+        <UnderTools tools={tools} panelFlag={panelFlag}/>
     </li>
   )
 }
@@ -28,6 +37,8 @@ function ToolsSidebar({tools}){
 ToolsSidebar.propTypes = {
   tools: PropTypes.object.isRequired,
   changeColor: PropTypes.func,
+  toCloseOpenPanel: PropTypes.func,
+  panelFlag: PropTypes.bool,
 }
 
 export default ToolsSidebar

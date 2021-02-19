@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/dashboard.css'
-import img from '../img/dashboard.svg'
+
 
 function Dashboard(){
   return(
