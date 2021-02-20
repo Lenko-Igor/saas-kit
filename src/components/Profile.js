@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import '../styles/profile.css'
-import Context from '../context'
+import Context from './context'
 import PropTypes from 'prop-types'
 
 function Profile(){

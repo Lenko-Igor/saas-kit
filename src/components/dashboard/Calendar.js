@@ -1,11 +1,10 @@
 import React from 'react'
-import '../styles/calendar.css'
+import './calendar.css'
 import ProgressBar from 'react-bootstrap/ProgressBar'
 import Week from './Week'
 
-function Calendar(){
-  const date = new Date()
 
+function Calendar(){
 
   return(
     <div className="calendar">
@@ -14,15 +13,15 @@ function Calendar(){
           <p>8 task completed out of 10</p>
           <div className="select">
             <select name="" id="">
-              <option value="1">Last week</option>
-              <option value="2">This week</option>
-              <option value="3">Next week</option>
+              <option value="1">This week</option>
+              <option value="2">Next week</option>
+              <option value="3">Last week</option>
             </select>
           </div>
         </div>
         <ProgressBar variant="success" now={80} />
       </div>
-        <Week date={date}/>
+        <Week/>
     </div>
   )
 }

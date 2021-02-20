@@ -5,13 +5,17 @@
   line-height: 22px;
   letter-spacing: 0.01em;
   color: #192A3E;
+  margin-bottom: 47px;
 }
 .week ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-.title_week {
+.week ul li {
+  cursor: pointer;
+}
+.week .day{
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -20,12 +24,19 @@
   letter-spacing: 0.01em;
   color: #334D6E;
   opacity: 0.5;
+  margin-bottom: 5px;
 }
-.date_week {
+.week ul li> div {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px 12px;
+  margin: 0 auto;
+}
+.week .date{
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 23px;
   text-align: center;
   letter-spacing: 0.01em;
   color: #4C5862;

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import '../styles/panel.css'
-import Context from '../context'
+import Context from './context'
 import Profile from './Profile'
 import MenuSidebar from './MenuSidebar'
 import settings from '../img/settings.svg'
